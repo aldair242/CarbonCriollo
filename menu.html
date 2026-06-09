@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbón Criollo | Nuestra Carta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="promo-banner-top">
+    <div class="promo-banner-track">
+        <span>COMBO FAMILIAR — S/ 115</span>
+        <span>LUNES Y MARTES: 20% OFF en todo</span>
+        <span>CUMPLEAÑOS: postre gratis</span>
+        <span>COMBO FAMILIAR — S/ 115</span>
+        <span>LUNES Y MARTES: 20% OFF en todo</span>
+        <span>CUMPLEAÑOS: postre gratis</span>
+    </div>
+</div>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=60&h=60&fit=crop&crop=center" alt="Logotipo Carbón Criollo" class="logo-img" width="45" height="45" loading="lazy">
+        Carbón Criollo
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="menu.html" class="activo">Nuestra Carta</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+    </ul>
+</nav>
+
+<main class="main-wrapper">
+    <div class="seccion-header anim-1">
+        <span class="seccion-eyebrow">Nuestros Platos</span>
+        <h2>Especialidades de la Casa</h2>
+        <div class="divider-gold"></div>
+    </div>
+
+    <div class="menu-tabs anim-2">
+        <button class="tab-btn activo" onclick="mostrarCategoria('pollo', this)">Pollo a la Brasa</button>
+        <button class="tab-btn" onclick="mostrarCategoria('parrilla', this)">Parrillas</button>
+        <button class="tab-btn" onclick="mostrarCategoria('bebidas', this)">Bebidas</button>
+    </div>
+
+    <div class="menu-categoria visible" id="cat-pollo">
+        <div class="categoria-header">
+            <span class="categoria-icono"><i class="fa-solid fa-drumstick-bite"></i></span>
+            <div>
+                <h3>Pollo a la Brasa</h3>
+                <p>Macerado 24h y horneado lentamente al carbón artesanal</p>
+            </div>
+        </div>
+        <div class="menu-grid">
+            <div class="tarjeta-plato">
+                <div class="badge-popular">Top Ventas</div>
+                <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400&h=280&fit=crop" alt="Pollo entero" loading="lazy">
+                <div class="plato-info">
+                    <h3>1 Pollo a la Brasa</h3>
+                    <div class="plato-incluye">
+                        <strong>Incluye:</strong>
+                        <ul><li>Pollo entero jugoso</li><li>Papas fritas</li><li>Ensalada fresca</li><li>Salsas de la casa</li></ul>
+                    </div>
+                    <div class="precio">S/ 85.00</div>
+                </div>
+            </div>
+            <div class="tarjeta-plato">
+                <div class="badge-popular">Top Ventas</div>
+                <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400&h=280&fit=crop" alt="Medio pollo" loading="lazy">
+                <div class="plato-info">
+                    <h3>1/2 Pollo a la Brasa</h3>
+                    <div class="plato-incluye">
+                        <strong>Incluye:</strong>
+                        <ul><li>Medio pollo</li><li>Papas fritas</li><li>Ensalada</li><li>Salsas</li></ul>
+                    </div>
+                    <div class="precio">S/ 45.00</div>
+                </div>
+            </div>
+            <div class="tarjeta-plato">
+                <div class="badge-popular">Top Ventas</div>
+                <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=280&fit=crop" alt="Cuarto pollo" loading="lazy">
+                <div class="plato-info">
+                    <h3>1/4 Pollo a la Brasa</h3>
+                    <div class="plato-incluye">
+                        <strong>Incluye:</strong>
+                        <ul><li>Cuarto de pollo</li><li>Papas fritas</li><li>Ensalada</li><li>Salsas</li></ul>
+                    </div>
+                    <div class="precio">S/ 28.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-categoria" id="cat-parrilla">
+        <div class="categoria-header">
+            <span class="categoria-icono"><i class="fa-solid fa-fire-flame-curved"></i></span>
+            <div>
+                <h3>Parrillas</h3>
+                <p>Cortes premium a la brasa con el auténtico sabor criollo</p>
+            </div>
+        </div>
+        <div class="menu-grid">
+            <div class="tarjeta-plato">
+                <div class="badge-popular">Favorito</div>
+                <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&h=280&fit=crop" alt="Parrilla familiar" loading="lazy">
+                <div class="plato-info">
+                    <h3>Parrilla Familiar</h3>
+                    <div class="plato-incluye">
+                        <strong>Incluye:</strong>
+                        <ul><li>1/4 pollo + bife de res</li><li>Chorizo + chuleta cerdo</li><li>Hot dog + anticuchos</li><li>Papas fritas + ensalada</li></ul>
+                    </div>
+                    <div class="precio">S/ 90.00</div>
+                </div>
+            </div>
+            <div class="tarjeta-plato">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=280&fit=crop" alt="Parrilla para 2" loading="lazy">
+                <div class="plato-info">
+                    <h3>Parrilla para 2</h3>
+                    <div class="plato-incluye">
+                        <strong>Incluye:</strong>
+                        <ul><li>1/4 pollo + chorizo</li><li>Hot dog + anticuchos</li><li>Chuleta de cerdo</li><li>Papas fritas + ensalada</li></ul>
+                    </div>
+                    <div class="precio">S/ 68.00</div>
+                </div>
+            </div>
+            <div class="tarjeta-plato">
+                <div class="badge-nuevo">Nuevo</div>
+                <img src="https://images.unsplash.com/photo-1574181611642-27a7f9b0b251?w=400&h=280&fit=crop" alt="Anticuchos" loading="lazy">
+                <div class="plato-info">
+                    <h3>Anticuchos de Corazón</h3>
+                    <div class="plato-incluye">
+                        <strong>Incluye:</strong>
+                        <ul><li>3 palos de anticucho</li><li>Papas fritas crocantes</li><li>Ensalada fresca</li><li>Salsa criolla</li></ul>
+                    </div>
+                    <div class="precio">S/ 25.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-categoria" id="cat-bebidas">
+        <div class="categoria-header">
+            <span class="categoria-icono"><i class="fa-solid fa-whiskey-glass"></i></span>
+            <div>
+                <h3>Bebidas</h3>
+                <p>El complemento perfecto para tu parrillada</p>
+            </div>
+        </div>
+        <div class="bebidas-grid">
+            <div class="tarjeta-plato tarjeta-bebida">
+                <div class="badge-popular">Clásico</div>
+                <img src="https://images.unsplash.com/photo-1527960471264-932f39eb5846?w=400&h=280&fit=crop" alt="Inca Kola 1.5L" loading="lazy">
+                <div class="plato-info">
+                    <h3>Inca Kola 1.5 Lt</h3>
+                    <div class="plato-incluye"><strong>Detalle</strong><ul><li>Botella 1.5 L no retornable</li></ul></div>
+                    <div class="precio">S/ 12.00</div>
+                </div>
+            </div>
+            <div class="tarjeta-plato tarjeta-bebida">
+                <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400&h=280&fit=crop" alt="Coca Cola 1.5L" loading="lazy">
+                <div class="plato-info">
+                    <h3>Coca Cola 1.5 Lt</h3>
+                    <div class="plato-incluye"><strong>Detalle</strong><ul><li>Botella 1.5 L no retornable</li></ul></div>
+                    <div class="precio">S/ 12.00</div>
+                </div>
+            </div>
+            <div class="tarjeta-plato tarjeta-bebida">
+                <img src="https://images.unsplash.com/photo-1527960471264-932f39eb5846?w=400&h=280&fit=crop" alt="Inca Kola 355ml" loading="lazy">
+                <div class="plato-info">
+                    <h3>Inca Kola 355 ml</h3>
+                    <div class="plato-incluye"><strong>Detalle</strong><ul><li>Lata 355 ml fría</li></ul></div>
+                    <div class="precio">S/ 6.00</div>
+                </div>
+            </div>
+            <div class="tarjeta-plato tarjeta-bebida">
+                <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400&h=280&fit=crop" alt="Coca Cola 355ml" loading="lazy">
+                <div class="plato-info">
+                    <h3>Coca Cola 355 ml</h3>
+                    <div class="plato-incluye"><strong>Detalle</strong><ul><li>Lata 355 ml fría</li></ul></div>
+                    <div class="precio">S/ 6.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer-lujo">
+    <div class="footer-grid">
+        <div class="footer-columna">
+            <h4>Carbón Criollo</h4>
+            <p>La mejor experiencia en pollos a la brasa y parrillas desde 1998.</p>
+            <div class="redes-sociales">
+                <a href="#" class="red-social ig"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="red-social fb"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="red-social tt"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="red-social yt"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-columna">
+            <h4>Nosotros</h4>
+            <ul><li><a href="index.html">Locales y Horarios</a></li><li><a href="#">Trabaja con Nosotros</a></li></ul>
+        </div>
+        <div class="footer-columna">
+            <h4>Atención al Cliente</h4>
+            <ul><li><a href="tel:+51016113333">Central: 01 - 611 - 3333</a></li><li><a href="#">Libro de Reclamaciones</a></li></ul>
+        </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Carbón Criollo. Todos los derechos reservados. | Proyecto AIF2</div>
+</footer>
+
+<a href="https://wa.me/51946546045" class="whatsapp-flotante" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<button class="btn-top" id="btnTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>

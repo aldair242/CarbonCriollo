@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbón Criollo | Pedidos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="promo-banner-top">
+    <div class="promo-banner-track">
+        <span>COMBO FAMILIAR — S/ 115</span>
+        <span>LUNES Y MARTES: 20% OFF en todo</span>
+        <span>CUMPLEAÑOS: postre gratis</span>
+        <span>COMBO FAMILIAR — S/ 115</span>
+        <span>LUNES Y MARTES: 20% OFF en todo</span>
+        <span>CUMPLEAÑOS: postre gratis</span>
+    </div>
+</div>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=60&h=60&fit=crop&crop=center" alt="Logotipo Carbón Criollo" class="logo-img" width="45" height="45" loading="lazy">
+        Carbón Criollo
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="menu.html">Nuestra Carta</a></li>
+        <li><a href="pedidos.html" class="activo">Pedidos</a></li>
+    </ul>
+</nav>
+
+<main class="main-wrapper">
+    <header class="seccion-header">
+        <span class="seccion-eyebrow">Haz tu Pedido</span>
+        <h1>Arma tu Pedido</h1>
+        <div class="divider-gold"></div>
+    </header>
+
+    <div class="pedidos-layout">
+        <section class="menu-seleccion">
+            <div class="pedidos-filtros">
+                <button class="filtro-btn activo" onclick="filtrarCategoria('todos', this)">Todos</button>
+                <button class="filtro-btn" onclick="filtrarCategoria('pollo', this)">Pollo a la Brasa</button>
+                <button class="filtro-btn" onclick="filtrarCategoria('parrilla', this)">Parrillas</button>
+                <button class="filtro-btn" onclick="filtrarCategoria('bebida', this)">Bebidas</button>
+            </div>
+            <div class="items-grid">
+                <h2 class="pedido-seccion-titulo" data-cat="pollo">Pollo a la Brasa</h2>
+                <div class="item-pedido" id="card-pollo1" data-cat="pollo">
+                    <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=300&h=200&fit=crop" alt="Pollo entero" loading="lazy">
+                    <div class="detalles"><h3>1 Pollo a la Brasa</h3><span class="precio-item">S/ 85.00</span></div>
+                    <div class="control-cantidad">
+                        <button class="btn-cant" onclick="cambiarCant('cantPollo1', 'card-pollo1', -1, 85)">-</button>
+                        <span class="num-cant" id="cantPollo1">0</span>
+                        <button class="btn-cant" onclick="cambiarCant('cantPollo1', 'card-pollo1', 1, 85)">+</button>
+                    </div>
+                </div>
+                <div class="item-pedido" id="card-polloMedio" data-cat="pollo">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=300&h=200&fit=crop" alt="Medio pollo" loading="lazy">
+                    <div class="detalles"><h3>1/2 Pollo a la Brasa</h3><span class="precio-item">S/ 45.00</span></div>
+                    <div class="control-cantidad">
+                        <button class="btn-cant" onclick="cambiarCant('cantPolloMedio', 'card-polloMedio', -1, 45)">-</button>
+                        <span class="num-cant" id="cantPolloMedio">0</span>
+                        <button class="btn-cant" onclick="cambiarCant('cantPolloMedio', 'card-polloMedio', 1, 45)">+</button>
+                    </div>
+                </div>
+                <div class="item-pedido" id="card-polloCuarto" data-cat="pollo">
+                    <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=300&h=200&fit=crop" alt="Cuarto pollo" loading="lazy">
+                    <div class="detalles"><h3>1/4 Pollo a la Brasa</h3><span class="precio-item">S/ 28.00</span></div>
+                    <div class="control-cantidad">
+                        <button class="btn-cant" onclick="cambiarCant('cantPolloCuarto', 'card-polloCuarto', -1, 28)">-</button>
+                        <span class="num-cant" id="cantPolloCuarto">0</span>
+                        <button class="btn-cant" onclick="cambiarCant('cantPolloCuarto', 'card-polloCuarto', 1, 28)">+</button>
+                    </div>
+                </div>
+
+                <h2 class="pedido-seccion-titulo" data-cat="parrilla">Parrillas</h2>
+                <div class="item-pedido" id="card-parrillaFam" data-cat="parrilla">
+                    <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=300&h=200&fit=crop" alt="Parrilla familiar" loading="lazy">
+                    <div class="detalles"><h3>Parrilla Familiar</h3><span class="precio-item">S/ 90.00</span></div>
+                    <div class="control-cantidad">
+                        <button class="btn-cant" onclick="cambiarCant('cantParrillaFam', 'card-parrillaFam', -1, 90)">-</button>
+                        <span class="num-cant" id="cantParrillaFam">0</span>
+                        <button class="btn-cant" onclick="cambiarCant('cantParrillaFam', 'card-parrillaFam', 1, 90)">+</button>
+                    </div>
+                </div>
+                <div class="item-pedido" id="card-parrilla2" data-cat="parrilla">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=300&h=200&fit=crop" alt="Parrilla para 2" loading="lazy">
+                    <div class="detalles"><h3>Parrilla para 2</h3><span class="precio-item">S/ 68.00</span></div>
+                    <div class="control-cantidad">
+                        <button class="btn-cant" onclick="cambiarCant('cantParrilla2', 'card-parrilla2', -1, 68)">-</button>
+                        <span class="num-cant" id="cantParrilla2">0</span>
+                        <button class="btn-cant" onclick="cambiarCant('cantParrilla2', 'card-parrilla2', 1, 68)">+</button>
+                    </div>
+                </div>
+                <div class="item-pedido" id="card-anticucho" data-cat="parrilla">
+                    <img src="https://images.unsplash.com/photo-1574181611642-27a7f9b0b251?w=300&h=200&fit=crop" alt="Anticuchos" loading="lazy">
+                    <div class="detalles"><h3>Anticuchos de Corazón</h3><span class="precio-item">S/ 25.00</span></div>
+                    <div class="control-cantidad">
+                        <button class="btn-cant" onclick="cambiarCant('cantAnticucho', 'card-anticucho', -1, 25)">-</button>
+                        <span class="num-cant" id="cantAnticucho">0</span>
+                        <button class="btn-cant" onclick="cambiarCant('cantAnticucho', 'card-anticucho', 1, 25)">+</button>
+                    </div>
+                </div>
+
+                <h2 class="pedido-seccion-titulo" data-cat="bebida">Bebidas</h2>
+                <div class="item-pedido" id="card-incakola" data-cat="bebida">
+                    <img src="https://images.unsplash.com/photo-1527960471264-932f39eb5846?w=300&h=200&fit=crop" alt="Inca Kola 1.5L" loading="lazy">
+                    <div class="detalles"><h3>Inca Kola 1.5 Lt</h3><span class="precio-item">S/ 12.00</span></div>
+                    <div class="control-cantidad">
+                        <button class="btn-cant" onclick="cambiarCant('cantIncaKola', 'card-incakola', -1, 12)">-</button>
+                        <span class="num-cant" id="cantIncaKola">0</span>
+                        <button class="btn-cant" onclick="cambiarCant('cantIncaKola', 'card-incakola', 1, 12)">+</button>
+                    </div>
+                </div>
+                <div class="item-pedido" id="card-cocacola" data-cat="bebida">
+                    <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?w=300&h=200&fit=crop" alt="Coca Cola 1.5L" loading="lazy">
+                    <div class="detalles"><h3>Coca Cola 1.5 Lt</h3><span class="precio-item">S/ 12.00</span></div>
+                    <div class="control-cantidad">
+                        <button class="btn-cant" onclick="cambiarCant('cantCocaCola', 'card-cocacola', -1, 12)">-</button>
+                        <span class="num-cant" id="cantCocaCola">0</span>
+                        <button class="btn-cant" onclick="cambiarCant('cantCocaCola', 'card-cocacola', 1, 12)">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="carrito-resumen">
+            <h2 class="carrito-titulo">Resumen del Pedido</h2>
+            <div class="form-group"><label>Nombre completo</label><input type="text" id="nombreCliente" placeholder="Tu nombre"></div>
+            <div class="form-group">
+                <label>Tipo de entrega</label>
+                <select id="tipoEntrega" onchange="verificarDelivery()">
+                    <option value="delivery">Delivery a Domicilio</option>
+                    <option value="recojo">Recojo en Tienda</option>
+                </select>
+            </div>
+            <div id="cajaDelivery">
+                <div class="form-group"><label>Dirección</label><input type="text" id="direccionCliente" placeholder="Av. ejemplo 123"></div>
+                <div class="form-group"><label>Celular</label><input type="tel" id="telefonoCliente" placeholder="987654321"></div>
+            </div>
+            <div id="cajaRecojo" style="display:none;">
+                <div class="form-group"><label>Local de Recojo</label><select id="localRecojo"><option>Sede Surco</option><option>Sede San Isidro</option></select></div>
+            </div>
+            <table class="tabla-carrito">
+                <tr><td>Subtotal Productos</td><td class="precio-celda" id="txtSubtotal">S/ 0.00</td></tr>
+                <tr id="filaDelivery"><td>Costo Delivery</td><td class="precio-celda">S/ 10.00</td></tr>
+                <tr class="fila-total"><td>TOTAL</td><td class="precio-celda" id="txtTotal">S/ 0.00</td></tr>
+            </table>
+            <button class="btn-luxury" onclick="procesarPedido()">Procesar Pedido</button>
+        </aside>
+    </div>
+</main>
+
+<footer class="footer-lujo">
+    <div class="footer-grid">
+        <div class="footer-columna">
+            <h4>Carbón Criollo</h4>
+            <p>La mejor experiencia en pollos a la brasa y parrillas desde 1998.</p>
+            <div class="redes-sociales">
+                <a href="#" class="red-social ig"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="red-social fb"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="red-social tt"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="red-social yt"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-columna">
+            <h4>Nosotros</h4>
+            <ul><li><a href="index.html">Locales y Horarios</a></li><li><a href="#">Trabaja con Nosotros</a></li></ul>
+        </div>
+        <div class="footer-columna">
+            <h4>Atención al Cliente</h4>
+            <ul><li><a href="tel:+51016113333">Central: 01 - 611 - 3333</a></li><li><a href="#">Libro de Reclamaciones</a></li></ul>
+        </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Carbón Criollo. Todos los derechos reservados. | Proyecto AIF2</div>
+</footer>
+
+<a href="https://wa.me/51946546045" class="whatsapp-flotante" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<button class="btn-top" id="btnTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>

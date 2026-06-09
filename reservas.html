@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbón Criollo | Reservas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="promo-banner-top">
+    <div class="promo-banner-track">
+        <span>COMBO FAMILIAR — S/ 115</span>
+        <span>LUNES Y MARTES: 20% OFF en todo</span>
+        <span>CUMPLEAÑOS: postre gratis</span>
+        <span>COMBO FAMILIAR — S/ 115</span>
+        <span>LUNES Y MARTES: 20% OFF en todo</span>
+        <span>CUMPLEAÑOS: postre gratis</span>
+    </div>
+</div>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=60&h=60&fit=crop&crop=center" alt="Logotipo Carbón Criollo" class="logo-img" width="45" height="45" loading="lazy">
+        Carbón Criollo
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reservas.html" class="activo">Reservas</a></li>
+        <li><a href="menu.html">Nuestra Carta</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+    </ul>
+</nav>
+
+<main class="main-wrapper">
+    <header class="seccion-header">
+        <span class="seccion-eyebrow">Reserva tu lugar</span>
+        <h1>Elige tu Experiencia</h1>
+        <div class="divider-gold"></div>
+    </header>
+
+    <div class="reservas-form-card">
+        <h2 class="form-titulo">Datos de la Reserva</h2>
+
+        <fieldset class="form-fieldset">
+            <legend class="form-legend">Información personal</legend>
+            <div class="form-fila-dos">
+                <div class="form-group">
+                    <label>Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Nombre y Apellidos" autocomplete="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo electrónico</label>
+                    <input type="email" id="email" placeholder="correo@ejemplo.com" autocomplete="email">
+                </div>
+            </div>
+            <div class="form-fila-dos">
+                <div class="form-group">
+                    <label>Teléfono / WhatsApp</label>
+                    <input type="tel" id="telefono" placeholder="+51 933 892 543" autocomplete="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Sede</label>
+                    <select id="sede" required>
+                        <option value="">Seleccionar sede</option>
+                        <option value="surco">Sede Surco — Av. Primavera 1234</option>
+                        <option value="san-isidro">Sede San Isidro — Calle Los Libertadores 450</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+            <legend class="form-legend">Detalles de la visita</legend>
+            <div class="form-fila-tres">
+                <div class="form-group">
+                    <label>Fecha</label>
+                    <input type="date" id="fecha" required>
+                </div>
+                <div class="form-group">
+                    <label>Número de personas</label>
+                    <select id="personas" required>
+                        <option value="">Seleccionar</option>
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                        <option value="5-6">5 – 6 personas</option>
+                        <option value="7-8">7 – 8 personas</option>
+                        <option value="9+">Más de 8</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Ocasión especial</label>
+                    <select id="ocasion">
+                        <option value="">Sin ocasión</option>
+                        <option value="cumpleanos">Cumpleaños</option>
+                        <option value="aniversario">Aniversario</option>
+                        <option value="familiar">Reunión familiar</option>
+                        <option value="trabajo">Reunión de trabajo</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+            <legend class="form-legend">Horario de llegada</legend>
+            <div class="form-group">
+                <label>Hora de llegada</label>
+                <select id="hora-llegada-select" onchange="seleccionarHorarioSelect(this.value)" required>
+                    <option value="">Seleccionar hora</option>
+                    <optgroup label="Almuerzo">
+                        <option value="12:00 pm">12:00 pm</option>
+                        <option value="12:30 pm">12:30 pm</option>
+                        <option value="1:00 pm">1:00 pm</option>
+                        <option value="1:30 pm">1:30 pm</option>
+                        <option value="2:00 pm">2:00 pm</option>
+                        <option value="2:30 pm">2:30 pm</option>
+                        <option value="3:00 pm">3:00 pm</option>
+                    </optgroup>
+                    <optgroup label="Cena">
+                        <option value="7:00 pm">7:00 pm</option>
+                        <option value="7:30 pm">7:30 pm</option>
+                        <option value="8:00 pm">8:00 pm</option>
+                        <option value="8:30 pm">8:30 pm</option>
+                        <option value="9:00 pm">9:00 pm</option>
+                    </optgroup>
+                </select>
+                <input type="hidden" id="hora-inicio">
+                <input type="text" id="hora-display" placeholder="Sin horario seleccionado" readonly style="margin-top:8px;">
+            </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+            <legend class="form-legend">Hora de salida estimada</legend>
+            <div class="form-group">
+                <label>Hora estimada de salida</label>
+                <select id="hora-fin">
+                    <option value="">Primero elige llegada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            <label>Notas adicionales</label>
+            <textarea id="notas" rows="3" placeholder="Alergias, solicitudes especiales..."></textarea>
+        </div>
+
+        <button class="btn-luxury" type="button" onclick="confirmarReserva()">Confirmar Reserva</button>
+        <p class="reservas-aviso">Confirmaremos tu reserva por WhatsApp en menos de 30 minutos.</p>
+    </div>
+</main>
+
+<footer class="footer-lujo">
+    <div class="footer-grid">
+        <div class="footer-columna">
+            <h4>Carbón Criollo</h4>
+            <p>La mejor experiencia en pollos a la brasa y parrillas desde 1998.</p>
+            <div class="redes-sociales">
+                <a href="#" class="red-social ig"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="red-social fb"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="red-social tt"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="red-social yt"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-columna">
+            <h4>Nosotros</h4>
+            <ul><li><a href="index.html">Locales y Horarios</a></li><li><a href="#">Trabaja con Nosotros</a></li></ul>
+        </div>
+        <div class="footer-columna">
+            <h4>Atención al Cliente</h4>
+            <ul><li><a href="tel:+51016113333">Central: 01 - 611 - 3333</a></li><li><a href="#">Libro de Reclamaciones</a></li></ul>
+        </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Carbón Criollo. Todos los derechos reservados. | Proyecto AIF2</div>
+</footer>
+
+<a href="https://wa.me/51946546045" class="whatsapp-flotante" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<button class="btn-top" id="btnTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>
