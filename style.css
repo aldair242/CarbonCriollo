@@ -96,6 +96,10 @@ h3 { font-size: clamp(1rem, 2.5vw, 1.4rem); }
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
 }
+@keyframes floatCentered {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -8px); }
+}
 
 .anim-1 { animation: fadeInUp 0.7s ease-out 0.10s both; }
 .anim-2 { animation: fadeInUp 0.7s ease-out 0.25s both; }
@@ -327,7 +331,7 @@ h3 { font-size: clamp(1rem, 2.5vw, 1.4rem); }
     letter-spacing: 4px;
     text-transform: uppercase;
     color: rgba(255,255,255,0.45);
-    animation: float 2.5s ease-in-out infinite;
+    animation: floatCentered 2.5s ease-in-out infinite;
 }
 
 .btn-luxury, .btn-outline {
@@ -963,7 +967,11 @@ h3 { font-size: clamp(1rem, 2.5vw, 1.4rem); }
     padding: 40px;
     max-width: 900px;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
 }
+
 .form-titulo {
     font-family: var(--fuente-titulo);
     font-size: 0.85rem;
@@ -1018,6 +1026,9 @@ h3 { font-size: clamp(1rem, 2.5vw, 1.4rem); }
     font-size: 0.85rem;
     width: 100%;
     transition: border-color 0.2s, box-shadow 0.2s;
+    position: relative;
+    z-index: 11;
+    pointer-events: auto;
 }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     border-color: var(--dorado);
@@ -1053,6 +1064,7 @@ h3 { font-size: clamp(1rem, 2.5vw, 1.4rem); }
     letter-spacing: 3.5px;
     margin-bottom: 16px;
 }
+
 .footer-columna p {
     color: var(--gris);
     font-size: 0.82rem;
@@ -1272,6 +1284,22 @@ h3 { font-size: clamp(1rem, 2.5vw, 1.4rem); }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .form-fila-tres { grid-template-columns: 1fr 1fr; }
 }
+
+.reservas-form-card select option,
+.reservas-form-card select optgroup {
+    background: var(--tarjeta);
+    color: var(--blanco);
+}
+
+.reservas-form-card select {
+    -webkit-appearance: menulist;
+    appearance: menulist;
+}
+
+.cc-modal-overlay { pointer-events: none; }
+.cc-modal-overlay--visible { pointer-events: auto; }
+.cc-toast--visible { pointer-events: auto; }
+
 @media (max-width: 600px) {
     .hero h1 { font-size: clamp(1.7rem, 8vw, 2.6rem); }
     .main-wrapper { padding: 36px 14px 60px; }
