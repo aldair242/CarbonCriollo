@@ -47,7 +47,8 @@
     </div>
 
     <div class="menu-tabs anim-2">
-        <button class="tab-btn activo" onclick="mostrarCategoria('pollo', this)">Pollo a la Brasa</button>
+        <button class="tab-btn activo" onclick="mostrarCategoria('todo', this)">Todos</button>
+        <button class="tab-btn" onclick="mostrarCategoria('pollo', this)">Pollo a la Brasa</button>
         <button class="tab-btn" onclick="mostrarCategoria('parrilla', this)">Parrillas</button>
         <button class="tab-btn" onclick="mostrarCategoria('bebidas', this)">Bebidas</button>
     </div>
@@ -100,7 +101,7 @@
         </div>
     </div>
 
-    <div class="menu-categoria" id="cat-parrilla">
+    <div class="menu-categoria visible" id="cat-parrilla">
         <div class="categoria-header">
             <span class="categoria-icono"><i class="fa-solid fa-fire-flame-curved"></i></span>
             <div>
@@ -147,7 +148,7 @@
         </div>
     </div>
 
-    <div class="menu-categoria" id="cat-bebidas">
+    <div class="menu-categoria visible" id="cat-bebidas">
         <div class="categoria-header">
             <span class="categoria-icono"><i class="fa-solid fa-whiskey-glass"></i></span>
             <div>
