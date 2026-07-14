@@ -50,11 +50,41 @@
         <section class="menu-seleccion">
             <div class="pedidos-filtros">
                 <button class="filtro-btn activo" onclick="filtrarCategoria('todos', this)">Todos</button>
+                <button class="filtro-btn" onclick="filtrarCategoria('promos', this)">Promociones</button>
                 <button class="filtro-btn" onclick="filtrarCategoria('pollo', this)">Pollo a la Brasa</button>
                 <button class="filtro-btn" onclick="filtrarCategoria('parrilla', this)">Parrillas</button>
                 <button class="filtro-btn" onclick="filtrarCategoria('bebida', this)">Bebidas</button>
             </div>
             <div class="items-grid">
+                <h2 class="pedido-seccion-titulo" data-cat="promos">Promociones</h2>
+                <div class="item-pedido" id="card-promoFamiliar" data-cat="promos">
+                    <img src="https://tofuu.getjusto.com/orioneat-local/resized2/7braYzLsSaT9u2kLP-300-x.webp" alt="Combo Familiar" loading="lazy">
+                    <div class="detalles"><h3>Combo Familiar Supremo</h3><span class="precio-item">S/ 115.00</span></div>
+                    <div class="control-cantidad">
+                        <button class="btn-cant" onclick="cambiarCant('cantPromoFam', 'card-promoFamiliar', -1, 115)">-</button>
+                        <span class="num-cant" id="cantPromoFam">0</span>
+                        <button class="btn-cant" onclick="cambiarCant('cantPromoFam', 'card-promoFamiliar', 1, 115)">+</button>
+                    </div>
+                </div>
+                <div class="item-pedido" id="card-promoPareja" data-cat="promos">
+                    <img src="https://tofuu.getjusto.com/orioneat-local/resized2/tqHzYTGHGJwyfGZhJ-300-x.webp" alt="Combo Pareja" loading="lazy">
+                    <div class="detalles"><h3>Combo Pareja Perfecta</h3><span class="precio-item">S/ 80.00</span></div>
+                    <div class="control-cantidad">
+                        <button class="btn-cant" onclick="cambiarCant('cantPromoPareja', 'card-promoPareja', -1, 80)">-</button>
+                        <span class="num-cant" id="cantPromoPareja">0</span>
+                        <button class="btn-cant" onclick="cambiarCant('cantPromoPareja', 'card-promoPareja', 1, 80)">+</button>
+                    </div>
+                </div>
+                <div class="item-pedido" id="card-promoExpress" data-cat="promos">
+                    <img src="https://www.donbelisario.com.pe/media/catalog/product/s/e/semana-dorada-promo-duo.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700&format=jpeg" alt="Almuerzo Express" loading="lazy">
+                    <div class="detalles"><h3>Almuerzo Express</h3><span class="precio-item">S/ 51.00</span></div>
+                    <div class="control-cantidad">
+                        <button class="btn-cant" onclick="cambiarCant('cantPromoExpress', 'card-promoExpress', -1, 51)">-</button>
+                        <span class="num-cant" id="cantPromoExpress">0</span>
+                        <button class="btn-cant" onclick="cambiarCant('cantPromoExpress', 'card-promoExpress', 1, 51)">+</button>
+                    </div>
+                </div>
+
                 <h2 class="pedido-seccion-titulo" data-cat="pollo">Pollo a la Brasa</h2>
                 <div class="item-pedido" id="card-pollo1" data-cat="pollo">
                     <img src="https://rokys.com/_next/image?url=https%3A%2F%2Ft2ks3pro.s3.amazonaws.com%2Fsku_1_pollo___papa___ensalada_73_200avF2Mq2h_main.jpg&w=1920&q=100" alt="Pollo entero" loading="lazy">
