@@ -129,11 +129,23 @@ function confirmarReserva() {
         if (!el || !el.value.trim()) return mostrarToast('Completa todos los campos obligatorios', 'error');
         valores[campo] = el.value.trim();
     }
+    
+    const emailEl = document.getElementById('email');
+    if (emailEl) {
+        const emailVal = emailEl.value.trim();
+        if (emailVal) {
+            if (!emailVal.includes('@') || !emailVal.endsWith('.com')) {
+                return mostrarToast('El correo debe contener "@" y terminar en ".com"', 'error');
+            }
+            valores['email'] = emailVal;
+        }
+    }
 
     const ocasion = document.getElementById('ocasion')?.value || '';
     const notas = document.getElementById('notas')?.value.trim() || '';
 
     let resumen = `Reserva\nNombre: ${valores['nombre']}\nFecha: ${valores['fecha']} - ${valores['hora-inicio']}\nPersonas: ${valores['personas']}\nSede: ${valores['sede']}`;
+    if (valores['email']) resumen += `\nCorreo: ${valores['email']}`;
     if (ocasion) resumen += `\nOcasión: ${ocasion}`;
     if (notas) resumen += `\nNotas: ${notas}`;
 
@@ -399,6 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initVolverArriba();
     initNavbarScroll();
     initNavLinks();
+    mostrarPromoModal();
 
     const inputFecha = document.getElementById('fecha');
     if (inputFecha) inputFecha.min = new Date().toISOString().split('T')[0];
@@ -424,3 +437,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function mostrarPromoModal() {
+    const modalPromo = document.getElementById('cc-promo-modal');
+    if (!modalPromo) return;
+
+    if (!sessionStorage.getItem('promoVista')) {
+        setTimeout(() => {
+            modalPromo.classList.add('cc-modal-overlay--visible');
+        }, 1500);
+        sessionStorage.setItem('promoVista', 'true');
+    }
+}
+
+function cerrarPromoModal() {
+    const modalPromo = document.getElementById('cc-promo-modal');
+    if (modalPromo) {
+        modalPromo.classList.remove('cc-modal-overlay--visible');
+    }
+}
